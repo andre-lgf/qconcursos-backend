@@ -66,7 +66,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.before(:suite) do
-    p "Seeding Database for Tests..."
+    p 'Seeding Database for Tests...'
     200.times do
       FactoryBot.create(:question_access)
     end

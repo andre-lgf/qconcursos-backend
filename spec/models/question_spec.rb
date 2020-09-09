@@ -11,7 +11,7 @@ RSpec.describe Question, type: :model do
 
   context 'with limit' do
     it 'returns records up to the limit' do
-      expect((described_class.hottest(Time.current, 5)).size).to be <= 5
+      expect(described_class.hottest(Time.current, 5).size).to be <= 5
     end
   end
 end

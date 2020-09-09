@@ -7,7 +7,7 @@ class QuestionAccess < ApplicationRecord
 
   def self.most_accessed_in_period(period)
     unless VALID_PERIODS.include?(period&.downcase)
-      return {error: "Invalid Period. Please choose between 'week', 'month' and 'year'"}
+      return { error: "Invalid Period. Please choose between 'week', 'month' and 'year'" }
     end
 
     start_time = case period.downcase
